@@ -43,6 +43,10 @@ project "bgfx"
 	}
 	filter "configurations:Debug"
 		defines "BX_CONFIG_DEBUG=1"
+        runtime "Debug"
+    filter "configurations:Release"
+        defines "BX_CONFIG_DEBUG=0"
+        runtime "Release"
 	filter "action:vs*"
 		defines "_CRT_SECURE_NO_WARNINGS"
 		excludes
@@ -83,6 +87,10 @@ project "bimg"
 	}
     filter "configurations:Debug"
         defines "BX_CONFIG_DEBUG=1"
+        runtime "Debug"
+    filter "configurations:Release"
+        defines "BX_CONFIG_DEBUG=0"
+        runtime "Release"
     filter "action:vs*"
 		defines "_CRT_SECURE_NO_WARNINGS"
 	setBxCompat()
@@ -115,6 +123,10 @@ project "bx"
 	}
     filter "configurations:Debug"
         defines "BX_CONFIG_DEBUG=1"
+        runtime "Debug"
+    filter "configurations:Release"
+        defines "BX_CONFIG_DEBUG=0"
+        runtime "Release"
 	filter "action:vs*"
 		defines "_CRT_SECURE_NO_WARNINGS"
 	setBxCompat()
