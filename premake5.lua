@@ -27,6 +27,8 @@ project "bgfx"
 		path.join(BGFX_DIR, "include/bgfx/**.h"),
 		path.join(BGFX_DIR, "src/*.cpp"),
 		path.join(BGFX_DIR, "src/*.h"),
+		path.join(BGFX_DIR, "tools/brtshaderc/*.cpp"),
+		path.join(BGFX_DIR, "tools/brtshaderc/*.h"),
 	}
 	excludes
 	{
@@ -39,7 +41,9 @@ project "bgfx"
 		path.join(BGFX_DIR, "include"),
 		path.join(BGFX_DIR, "3rdparty"),
 		path.join(BGFX_DIR, "3rdparty/dxsdk/include"),
-		path.join(BGFX_DIR, "3rdparty/khronos")
+		path.join(BGFX_DIR, "3rdparty/khronos"),
+		path.join(BGFX_DIR, "3rdparty/fcpp"),
+		path.join(BGFX_DIR, "3rdparty/glsl-optimizer/src/glsl")
 	}
 	filter "configurations:Debug"
 		defines "BX_CONFIG_DEBUG=1"
